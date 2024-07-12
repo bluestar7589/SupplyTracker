@@ -1,0 +1,73 @@
+﻿@model Customers
+
+@{
+    ViewData["Title"] = "Create a Customer";
+}
+
+<h2>Create a Customer</h2>
+
+<form method="post">
+    <div>
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="FirstName" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="LastName" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="DepartmentCode" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="DepartmentCode" class="form-control" />
+                <span asp-validation-for="DepartmentCode" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="Position" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
+                <button type="button" name="clear" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--To activate the javascript - jQuery to validate the data->
+@section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,104 @@
+﻿<!-- To biding data from client to server -->
+@model Products
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<h2>Create a Product</h2>
+
+<form method="post">
+    <div>
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="ProductName" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="LotNumber" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="LotNumber" class="form-control" />
+                <span asp-validation-for="LotNumber" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="Price" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="UnitOfSupply" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="UnitOfSupply" class="form-control" />
+                <span asp-validation-for="UnitOfSupply" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="DateOfProduct" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="DateOfProduct" class="form-control" />
+                <span asp-validation-for="DateOfProduct" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="DateOfExpire" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="DateOfExpire" class="form-control" />
+                <span asp-validation-for="DateOfExpire" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="ProductCategoryCode" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ProductCategoryCode" class="form-control" />
+                <span asp-validation-for="ProductCategoryCode" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="VendorCode" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="VendorCode" class="form-control" />
+                <span asp-validation-for="VendorCode" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
+                <button type="button" name="clear" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--To activate the javascript - jQuery to validate the data->
+@section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+}
